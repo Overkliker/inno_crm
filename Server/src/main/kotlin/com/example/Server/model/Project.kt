@@ -13,7 +13,7 @@ class Project {
     @Column(name = "project_id")
     var projectId: UUID? = null
 
-    var name: String? = null
+    var name: String = ""
 
     @ManyToMany(
         fetch = FetchType.LAZY,
@@ -25,4 +25,11 @@ class Project {
     )
     @JsonIgnore
     var users: Set<User> = hashSetOf()
+
+    @OneToMany(
+        cascade = [CascadeType.ALL],
+        fetch = FetchType.LAZY,
+        mappedBy = "project"
+    )
+    var statuses: Set<Status> = hashSetOf()
 }
