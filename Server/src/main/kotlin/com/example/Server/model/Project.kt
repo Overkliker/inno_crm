@@ -6,14 +6,14 @@ import java.util.UUID
 
 @Entity
 @Table(name = "projects")
-class Project {
+class Project (
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "project_id")
-    var projectId: UUID? = null
+    var projectId: UUID? = null,
 
-    var name: String = ""
+    var name: String = "",
 
     @ManyToMany(
         fetch = FetchType.LAZY,
@@ -24,12 +24,19 @@ class Project {
         mappedBy = "projects"
     )
     @JsonIgnore
-    var users: Set<User> = hashSetOf()
+    var users: Set<User> = hashSetOf(),
 
     @OneToMany(
         cascade = [CascadeType.ALL],
         fetch = FetchType.LAZY,
         mappedBy = "project"
     )
-    var statuses: Set<Status> = hashSetOf()
-}
+    var statuses: Set<Status> = hashSetOf(),
+
+    @OneToMany(
+        cascade = [CascadeType.ALL],
+        fetch = FetchType.LAZY,
+        mappedBy = "project"
+    )
+    var tasks: Set<Task> = hashSetOf()
+)

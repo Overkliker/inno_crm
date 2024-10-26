@@ -1,0 +1,152 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-data-into-users-and-projects
+      author: klik
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: user_id
+                  value: '13819694-86e1-4816-8a0e-003cf0dec447'
+              - column:
+                  name: username
+                  value: 'admin'
+              - column:
+                  name: nickname
+                  value: 'admin'
+              - column:
+                  name: password
+                  value: 'admin'
+              - column:
+                  name: email
+                  value: 'admin@mail.com'
+        - insert:
+            tableName: projects
+            columns:
+              - column:
+                  name: project_id
+                  value: '80ecb30c-e98e-4934-9806-02b5219df723'
+              - column:
+                  name: name
+                  value: 'admin-project'
+
+        - insert:
+            tableName: projects
+            columns:
+              - column:
+                  name: project_id
+                  value: '2fad8f8d-fdb3-4443-8727-0ec36b21a4c6'
+              - column:
+                  name: name
+                  value: 'none-admin-project'
+        - insert:
+            tableName: users_projects
+            columns:
+              - column:
+                  name: user_id
+                  value: '13819694-86e1-4816-8a0e-003cf0dec447'
+              - column:
+                  name: project_id
+                  value: '80ecb30c-e98e-4934-9806-02b5219df723'
+
+  - changeSet:
+      id: add-data-into-statuses
+      author: klik
+      changes:
+        - insert:
+            tableName: statuses
+            columns:
+              - column:
+                  name: status_id
+                  value: '2b66fb86-27e4-4226-ad71-9367ecf5dd00'
+              - column:
+                  name: status_name
+                  value: 'create'
+              - column:
+                  name: project_id
+                  value: '80ecb30c-e98e-4934-9806-02b5219df723'
+        - insert:
+            tableName: statuses
+            columns:
+              - column:
+                  name: status_id
+                  value: '4da5018a-8ce1-4cda-910e-ce27323587c2'
+              - column:
+                  name: status_name
+                  value: 'in progress'
+              - column:
+                  name: project_id
+                  value: '80ecb30c-e98e-4934-9806-02b5219df723'
+
+  - changeSet:
+      id: add-data-into-tasks
+      author: klik
+      changes:
+        - insert:
+            tableName: tasks
+            columns:
+              - column:
+                  name: task_id
+                  value: '123e4567-e89b-12d3-a456-426614174000'
+              - column:
+                  name: task_name
+                  value: 'First task'
+              - column:
+                  name: description
+                  value: 'This is first task'
+              - column:
+                  name: create_date
+                  value: 2024-10-26T14:30:00Z
+              - column:
+                  name: last_update
+                  value: 2024-10-26T14:30:00Z
+              - column:
+                  name: deadline
+                  value: 2024-10-30T14:30:00Z
+              - column:
+                  name: position
+                  value: '1'
+              - column:
+                  name: status_id
+                  value: '2b66fb86-27e4-4226-ad71-9367ecf5dd00'
+              - column:
+                  name: user_id
+                  value: '13819694-86e1-4816-8a0e-003cf0dec447'
+              - column:
+                  name: project_id
+                  value: '80ecb30c-e98e-4934-9806-02b5219df723'
+
+        - insert:
+            tableName: tasks
+            columns:
+              - column:
+                  name: task_id
+                  value: 'd727a7a2-6c91-46e2-b50a-85d992e5042d'
+              - column:
+                  name: task_name
+                  value: 'Second task'
+              - column:
+                  name: description
+                  value: 'This is second task'
+              - column:
+                  name: create_date
+                  value: 2024-10-26T14:30:00Z
+              - column:
+                  name: last_update
+                  value: 2024-10-26T14:30:00Z
+              - column:
+                  name: deadline
+                  value: 2024-10-30T14:30:00Z
+              - column:
+                  name: position
+                  value: '1'
+              - column:
+                  name: status_id
+                  value: '2b66fb86-27e4-4226-ad71-9367ecf5dd00'
+              - column:
+                  name: user_id
+                  value: '13819694-86e1-4816-8a0e-003cf0dec447'
+              - column:
+                  name: project_id
+                  value: '80ecb30c-e98e-4934-9806-02b5219df723'

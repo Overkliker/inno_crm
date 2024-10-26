@@ -2,7 +2,6 @@ spring:
   application:
     name: Server
 
-
   datasource:
     url: jdbc:postgresql://localhost:5432/inno_db
     username: postgres
@@ -12,8 +11,6 @@ spring:
   jpa:
     hibernate:
       ddl-auto: none
-
-
     show-sql: true
 
   liquibase:

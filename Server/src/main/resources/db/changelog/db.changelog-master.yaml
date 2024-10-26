@@ -1,5 +1,5 @@
 databaseChangeLog:
   - include:
-      file: db/changelog/0.0.1/create-users-and-projects-tables.sql
+      file: db/changelog/0.0.1/create-tables.yml
   - include:
-      file: db/changelog/0.0.1/add-data-to-users-and-projects.sql
+      file: db/changelog/0.0.1/add-data-into-tables.yml

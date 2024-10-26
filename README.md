@@ -1,0 +1,1 @@
+For create test database into docker goto **/database** and run *.bat* file 

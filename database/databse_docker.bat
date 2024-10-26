@@ -1,0 +1,1 @@
+docker run -d --name inno -p 5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=1234 -e POSTGRES_DB=inno_db postgres:15.6-alpine

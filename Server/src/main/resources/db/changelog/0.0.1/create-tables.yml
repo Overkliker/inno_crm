@@ -1,0 +1,163 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-users
+      author: kliker
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: user_id
+                  type: uuid
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: username
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: nickname
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: password
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+
+  - changeSet:
+      id: create-projects
+      author: klik
+      changes:
+        - createTable:
+            tableName: projects
+            columns:
+              - column:
+                  name: project_id
+                  type: uuid
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+
+        - createTable:
+            tableName: users_projects
+            columns:
+              - column:
+                  name: user_id
+                  type: uuid
+                  constraints:
+                    foreignKeyName: user_id_key
+                    referencedTableName: users
+                    referencedColumnNames: user_id
+              - column:
+                  name: project_id
+                  type: uuid
+                  constraints:
+                    foreignKeyName: project_id_key
+                    referencedTableName: projects
+                    referencedColumnNames: project_id
+
+  - changeSet:
+      id: create-statuses
+      author: klik
+      changes:
+        - createTable:
+            tableName: statuses
+            columns:
+              - column:
+                  name: status_id
+                  type: uuid
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: status_name
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: project_id
+                  type: uuid
+                  constraints:
+                    foreignKeyName: project_for_status
+                    referencedTableName: projects
+                    referencedColumnNames: project_id
+
+  - changeSet:
+      id: create-tasks
+      author: klik
+      changes:
+        - createTable:
+            tableName: tasks
+            columns:
+              - column:
+                  name: task_id
+                  type: uuid
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: task_name
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: description
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: create_date
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: last_update
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: deadline
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: position
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: status_id
+                  type: uuid
+                  constraints:
+                    foreignKeyName: status_for_task
+                    referencedTableName: statuses
+                    referencedColumnNames: status_id
+              - column:
+                  name: user_id
+                  type: uuid
+                  constraints:
+                    foreignKeyName: user_for_task
+                    referencedTableName: users
+                    referencedColumnNames: user_id
+                    nullable: true
+              - column:
+                  name: project_id
+                  type: uuid
+                  constraints:
+                    foreignKeyName: project_for_task
+                    referencedTableName: projects
+                    referencedColumnNames: project_id

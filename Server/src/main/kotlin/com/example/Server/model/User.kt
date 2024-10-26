@@ -6,20 +6,20 @@ import java.util.*
 
 @Entity
 @Table(name = "users")
-class User{
+class User (
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "user_id")
-    var userId: UUID? = null
+    var userId: UUID? = null,
 
-    var username: String? = null
+    var username: String? = null,
 
-    var nickname: String? = null
+    var nickname: String? = null,
 
-    var password: String? = null
+    var password: String? = null,
 
-    var email: String? = null
+    var email: String? = null,
 
     @ManyToMany(
         fetch = FetchType.LAZY,
@@ -34,6 +34,12 @@ class User{
         inverseJoinColumns = [JoinColumn(name = "project_id")]
 
     )
-    var projects: Set<Project> = hashSetOf()
-}
+    var projects: Set<Project> = hashSetOf(),
 
+    @OneToMany(
+        cascade = [CascadeType.ALL],
+        fetch = FetchType.LAZY,
+        mappedBy = "user"
+    )
+    var tasks: Set<Task> = hashSetOf()
+)
