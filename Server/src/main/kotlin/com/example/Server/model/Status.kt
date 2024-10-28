@@ -19,12 +19,4 @@ class Status (
     @JoinColumn(name = "project_id", nullable = false)
     @JsonIgnore
     var project: Project = Project(),
-
-    @OneToMany(
-        cascade = [CascadeType.ALL],
-        fetch = FetchType.LAZY,
-        mappedBy = "status"
-        )
-    @JsonIgnore
-    var tasks: Set<Task> = hashSetOf()
 )

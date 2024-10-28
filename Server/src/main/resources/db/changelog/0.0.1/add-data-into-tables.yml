@@ -146,7 +146,38 @@ databaseChangeLog:
                   value: '2b66fb86-27e4-4226-ad71-9367ecf5dd00'
               - column:
                   name: user_id
-                  value: '13819694-86e1-4816-8a0e-003cf0dec447'
+                  value: null
               - column:
                   name: project_id
                   value: '80ecb30c-e98e-4934-9806-02b5219df723'
+  - changeSet:
+      id: add-values-into-tags
+      author: klik
+      changes:
+        - insert:
+            tableName: tags
+            columns:
+              - column:
+                  name: tag_id
+                  value: '64870702-ebbf-4723-9c93-e1d8d37dab91'
+              - column:
+                  name: tag_name
+                  value: "python"
+              - column:
+                  name: project_id
+                  value: '80ecb30c-e98e-4934-9806-02b5219df723'
+
+  - changeSet:
+      id: add-values-into-tags-tasks
+      author: klik
+      changes:
+        - insert:
+            tableName: tags_tasks
+            columns:
+              - column:
+                  name: tag_id
+                  value: '64870702-ebbf-4723-9c93-e1d8d37dab91'
+              - column:
+                  name: task_id
+                  value: 'd727a7a2-6c91-46e2-b50a-85d992e5042d'
+

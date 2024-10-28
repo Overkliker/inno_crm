@@ -32,7 +32,6 @@ class User (
         name = "users_projects",
         joinColumns = [JoinColumn(name = "user_id")],
         inverseJoinColumns = [JoinColumn(name = "project_id")]
-
     )
     var projects: Set<Project> = hashSetOf(),
 

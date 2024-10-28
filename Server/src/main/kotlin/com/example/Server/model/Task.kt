@@ -37,11 +37,17 @@ class Task (
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "status_id", nullable = false)
-    @JsonIgnore
     var status: Status = Status(),
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
     @JsonIgnore
-    var user: User? = null
+    var user: User? = null,
+
+    @ManyToMany(
+        fetch = FetchType.LAZY,
+        cascade = [CascadeType.ALL],
+        mappedBy = "tasks"
+    )
+    var tags: Set<Tag> = hashSetOf()
 )

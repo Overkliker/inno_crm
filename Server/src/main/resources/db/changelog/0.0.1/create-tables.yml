@@ -161,3 +161,52 @@ databaseChangeLog:
                     foreignKeyName: project_for_task
                     referencedTableName: projects
                     referencedColumnNames: project_id
+
+  - changeSet:
+      id: create-tags
+      author: klik
+      changes:
+        - createTable:
+            tableName: tags
+            columns:
+              - column:
+                  name: tag_id
+                  type: uuid
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: tag_name
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: project_id
+                  type: uuid
+                  constraints:
+                    foreignKeyName: project-for-tag-fk
+                    referencedTableName: projects
+                    referencedColumnNames: project_id
+
+  - changeSet:
+      id: create-tags-tasks-table
+      author: klik
+      changes:
+        - createTable:
+            tableName: tags_tasks
+            columns:
+              - column:
+                  name: tag_id
+                  type: uuid
+                  constraints:
+                    foreignKeyName: tag-for-task-fk
+                    referencedTableName: tags
+                    referencedColumnNames: tag_id
+              - column:
+                  name: task_id
+                  type: uuid
+                  constraints:
+                    foreignKeyName: task-for-tag-fk
+                    referencedTableName: tasks
+                    referencedColumnNames: task_id
+

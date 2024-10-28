@@ -2,6 +2,7 @@ package com.example.Server.model
 
 import com.fasterxml.jackson.annotation.JsonIgnore
 import jakarta.persistence.*
+import org.springframework.core.metrics.StartupStep.Tags
 import java.util.UUID
 
 @Entity
@@ -38,5 +39,13 @@ class Project (
         fetch = FetchType.LAZY,
         mappedBy = "project"
     )
-    var tasks: Set<Task> = hashSetOf()
+    var tasks: Set<Task> = hashSetOf(),
+
+
+    @OneToMany(
+        cascade = [CascadeType.ALL],
+        fetch = FetchType.LAZY,
+        mappedBy = "project"
+    )
+    var tags: Set<Tag> = hashSetOf()
 )
