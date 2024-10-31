@@ -1,3 +1,4 @@
-<div class="background">
-    <h1>sJKsafd</h1>
+<div>
+    <button (click)="showMenu()" *ngIf="!isMenuOpen">посмотреть меню</button>
+    <app-menu (parentIsShowing)="showMenu()" *ngIf="isMenuOpen"></app-menu>
 </div>

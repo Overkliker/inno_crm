@@ -1,5 +1,5 @@
-$main_background: #ecf1f4;
-$main_vidgets: #ecf4f4;
+$main_background: #f0f0f0;
+$main_vidgets: #ABC2CF;
 $black_text: black;
 $gray_text: #BDBF96;
 
@@ -7,6 +7,11 @@ body{
     background-color: $main_background;
 }
 
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0 !important;
+}
 
 @font-face {
     font-family: "Ubuntu-bold";

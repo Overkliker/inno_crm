@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./area.component.scss']
 })
 export class AreaComponent {
+  isMenuOpen = false
 
+  showMenu(){
+    console.log(this.isMenuOpen)
+    this.isMenuOpen = !this.isMenuOpen
+  }
 }

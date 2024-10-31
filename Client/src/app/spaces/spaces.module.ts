@@ -5,13 +5,17 @@ import { SpacesRoutingModule } from './spaces-routing.module';
 import { AreaComponent } from './area/area.component';
 import { CardComponent } from './card/card.component';
 import { DeskComponent } from './desk/desk.component';
+import { MenuComponent } from './menu/menu.component';
+import { PanelComponent } from './panel/panel.component';
 
 
 @NgModule({
   declarations: [
     AreaComponent,
     CardComponent,
-    DeskComponent
+    DeskComponent,
+    MenuComponent,
+    PanelComponent
   ],
   imports: [
     CommonModule,
