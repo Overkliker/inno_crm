@@ -1,0 +1,8 @@
+@import './../../../styles';
+
+.card_container{
+  background-color: $main_vidgets;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

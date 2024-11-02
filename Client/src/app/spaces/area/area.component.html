@@ -1,4 +1,8 @@
-<div>
+<div class="area-container">
     <button (click)="showMenu()" *ngIf="!isMenuOpen">посмотреть меню</button>
-    <app-menu (parentIsShowing)="showMenu()" *ngIf="isMenuOpen"></app-menu>
+    <app-menu class="menu-class" (parentIsShowing)="showMenu()" *ngIf="isMenuOpen"></app-menu>
+    <div class="desk-container-area">
+      <app-desk></app-desk>
+    </div>
+
 </div>
