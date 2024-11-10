@@ -15,6 +15,14 @@ export class DeskComponent {
     this.cards.push(new CardComponent());
     this.cards.push(new CardComponent());
     this.cards.push(new CardComponent());
+    this.cards.push(new CardComponent());
+    this.cards.push(new CardComponent());
+    this.cards.push(new CardComponent());
+    this.cards.push(new CardComponent());
+    this.cards.push(new CardComponent());
+    this.cards.push(new CardComponent());
+    this.cards.push(new CardComponent());
+    this.cards.push(new CardComponent());
   }
 
 }
