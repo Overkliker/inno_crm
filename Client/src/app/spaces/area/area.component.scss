@@ -8,17 +8,34 @@ h1{
 
 .area-container{
   height: auto;
-  display: flex;
   overflow: hidden;
 }
 
 
 .desk-container-area{
-  height: 100vh;
-  width: 95vw;
+  height: 93vh;
+  width: 97vw;
 }
 
 .menu-class{
   height: 100vh;
   width: 20%;
 }
+
+
+// .button-menu-open{
+//   margin-left: 15px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 60px;
+//   width: 60px;
+//   background: #FFFFFF;
+//   border-radius: 10px;
+//   border: 1px solid black;
+//   padding-left: 3px;
+// }
+
+// .button-menu-open:hover{
+//   background: #F49EE9;
+// }

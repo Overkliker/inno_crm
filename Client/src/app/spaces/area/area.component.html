@@ -1,12 +1,14 @@
 <div class="area-container">
-    <button (click)="showMenu()" *ngIf="!isMenuOpen">посмотреть меню</button>
 
-    <div style="display: flex;">
-        <app-menu class="menu-class" (parentIsShowing)="showMenu()" *ngIf="isMenuOpen"></app-menu>
+  <!-- <button class="button-menu-open" (click)="showMenu()" *ngIf="!isMenuOpen">посмотреть меню</button> -->
 
-      <app-desk class="desk-container-area"></app-desk>
+  <app-header></app-header>
 
-    </div>
+  <div style="display: flex;">
+      <app-menu class="menu-class" (parentIsShowing)="showMenu()" *ngIf="isMenuOpen"></app-menu>
 
+    <app-desk class="desk-container-area"></app-desk>
+
+  </div>
 
 </div>
