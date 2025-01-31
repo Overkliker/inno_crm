@@ -40,5 +40,5 @@ class User (
         fetch = FetchType.LAZY,
         mappedBy = "user"
     )
-    var tasks: Set<Task> = hashSetOf()
+    var tasks: Set<Tasks> = hashSetOf()
 )

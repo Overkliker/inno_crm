@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  @Output('menuIsShowing') showMenuEvent: EventEmitter<any> = new EventEmitter();
+  
+  closeSvg = "../../../../assets/icons/close_menu.svg";
 
+
+  whatSvg = true;
+
+  showMenu(){
+    this.showMenuEvent.emit();
+
+    this.whatSvg = !this.whatSvg;
+  }
 }

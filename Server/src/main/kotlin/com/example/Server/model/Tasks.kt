@@ -8,7 +8,7 @@ import java.util.UUID
 
 @Entity
 @Table(name = "tasks")
-class Task (
+class Tasks (
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "task_id")

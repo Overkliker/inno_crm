@@ -30,5 +30,5 @@ class Tag (
         inverseJoinColumns = [JoinColumn(name = "task_id")]
     )
     @JsonIgnore
-    var tasks: Set<Task> = hashSetOf(),
+    var tasks: Set<Tasks> = hashSetOf(),
 )

@@ -6,7 +6,7 @@ import {Component, EventEmitter, Output} from '@angular/core';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent {
-  @Output('parentIsShowing') parentEvent: EventEmitter<any> = new EventEmitter();
+  @Output('menuIsShowing') parentEvent: EventEmitter<any> = new EventEmitter();
 
   showMenu(){
     this.parentEvent.emit();

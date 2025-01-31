@@ -39,7 +39,7 @@ class Project (
         fetch = FetchType.LAZY,
         mappedBy = "project"
     )
-    var tasks: Set<Task> = hashSetOf(),
+    var tasks: Set<Tasks> = hashSetOf(),
 
 
     @OneToMany(

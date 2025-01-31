@@ -1,18 +1,40 @@
-version: 3.9
+version: '3.8'
 
 services:
-  db:
+  database:
     image: postgres:15.6-alpine
     restart: always
     environment:
-      - POSTGRES_USER: potgres
-      - POSTGRES_PASSWORD: 1234
-      - POSTGRES_DATABASE: inno_db
+      POSTGRES_DB: inno_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
     
     ports:
       - '5432:5432'
-
-    volumes:
-      - db:/var/lib/postgresql/data
     
+    networks:
+      - app-network
+  
+  backend:
+    build:
+      context: .
+      dockerfile: ./Server/Dockerfile
+    
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://database:5432/inno_db
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: 1234
+
+    ports:
+      - "8085:8085"
+
+    depends_on:
+      - database
+    
+    networks:
+      - app-network
+  
+networks:
+  app-network:
+    driver: bridge
     

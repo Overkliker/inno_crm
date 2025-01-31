@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a351664-a369-48e5-b62e-ede5a2b82989" name="Changes" comment="" />
+    <list default="true" id="6a351664-a369-48e5-b62e-ede5a2b82989" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/spaces/area/area.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/spaces/area/area.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/spaces/components_templates/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/spaces/components_templates/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/spaces/components_templates/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/spaces/components_templates/header/header.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/spaces/components_templates/open-menu-button/open-menu-button.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/spaces/components_templates/open-menu-button/open-menu-button.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/spaces/components_templates/open-menu-button/open-menu-button.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/spaces/components_templates/open-menu-button/open-menu-button.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/spaces/menu/menu.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/spaces/menu/menu.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/assets/icons/vector_button.svg" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,9 +22,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2ns66M9986KA3cwXHltsuxf97iB" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -23,13 +35,27 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "klik__front",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/kliker/Desktop/inno_crm/Server",
+    "last_opened_file_path": "/Users/d.hrenov/Documents/inno_crm",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -39,6 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1729749262138</updated>
       <workItem from="1729749266539" duration="54000" />
+      <workItem from="1734029367245" duration="872000" />
     </task>
     <servers />
   </component>
